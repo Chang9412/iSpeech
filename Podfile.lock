@@ -1,0 +1,91 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - FCFileManager (1.0.20)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJExtension (3.3.0)
+  - MJRefresh (3.7.2)
+  - NSDate-Additions (0.0.11)
+  - ReactiveCocoa (2.5.2):
+    - ReactiveCocoa/UI (= 2.5.2)
+  - ReactiveCocoa/Core (2.5.2):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5.2)
+  - ReactiveCocoa/UI (2.5.2):
+    - ReactiveCocoa/Core
+  - SDWebImage (5.12.0):
+    - SDWebImage/Core (= 5.12.0)
+  - SDWebImage/Core (5.12.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - ChameleonFramework
+  - FCFileManager
+  - FMDB
+  - Masonry
+  - MBProgressHUD
+  - MJExtension
+  - MJRefresh
+  - NSDate-Additions
+  - ReactiveCocoa (from `https://github.com/zhao0/ReactiveCocoa.git`, tag `2.5.2`)
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - ChameleonFramework
+    - FCFileManager
+    - FMDB
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - NSDate-Additions
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  ReactiveCocoa:
+    :git: https://github.com/zhao0/ReactiveCocoa.git
+    :tag: 2.5.2
+
+CHECKOUT OPTIONS:
+  ReactiveCocoa:
+    :git: https://github.com/zhao0/ReactiveCocoa.git
+    :tag: 2.5.2
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
+  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
+  NSDate-Additions: b26bd8c9a7303672c2d23c3c6d1c4b9456c8d8da
+  ReactiveCocoa: 3ff25b1bd992ac79c5c79b26b6c0c1713b715bb2
+  SDWebImage: 4ea20cca2986adc5aacde07aa686742fd4c67a37
+
+PODFILE CHECKSUM: 27394d12d59cf03ab764590a9c055035f944dd0f
+
+COCOAPODS: 1.11.2

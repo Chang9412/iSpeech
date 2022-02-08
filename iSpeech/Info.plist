@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string></string>
+            <key>LSItemContentTypes</key>
+            <array>
+                <string>com.microsoft.powerpoint.ppt</string>
+                <string>public.item</string>
+                <string>com.microsoft.word.doc</string>
+                <string>com.adobe.pdf</string>
+                <string>com.microsoft.excel.xls</string>
+                <string>public.image</string>
+                <string>public.content</string>
+                <string>public.composite-content</string>
+                <string>public.archive</string>
+                <string>public.audio</string>
+                <string>public.movie</string>
+                <string>public.text</string>
+                <string>public.data</string>
+            </array>
+			<key>Document Content Type UTIs</key>
+			<array>
+				<string>public.item</string>
+			</array>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+		</dict>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
+</dict>
+</plist>

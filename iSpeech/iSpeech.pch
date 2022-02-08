@@ -1,0 +1,29 @@
+//
+//  iSpeech.pch
+//  iSpeech
+//
+//  Created by zhengqiang zhang on 2021/12/31.
+//
+
+#ifndef iSpeech_pch
+#define iSpeech_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIColor+Utils.h"
+#import "UIColor+App.h"
+
+#import "UIImage+Utils.h"
+
+#import "UIScrollView+SafeArea.h"
+
+#import "IPNavigationController.h"
+
+#import "RefrenceMacro.h"
+
+#import "UIImageView+App.h"
+
+#import <MBProgressHUD.h>
+
+#endif /* iSpeech_pch */
