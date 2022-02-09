@@ -61,11 +61,11 @@
             }
             return;
         }
-        if (result && result.bestTranscription) {
-            NSLog(@"%@", result.bestTranscription.formattedString);
-        }
-        if (result.final) {
-            NSLog(@"--%@", result.bestTranscription.formattedString);
+        if ([self.delegate respondsToSelector:@selector(recognitionResult:finished:)]) {
+            if (result && result.bestTranscription) {
+                NSLog(@"%@", result.bestTranscription.formattedString);
+                [self.delegate recognitionResult:result.bestTranscription.formattedString finished:result.final];
+            }
         }
         
     }];
@@ -122,7 +122,7 @@
 }
 
 + (NSString *)fileDirectory {
-    NSString *dir = [[FCFileManager pathForCachesDirectory] stringByAppendingPathComponent:@"Input"];
+    NSString *dir = [[FCFileManager pathForCachesDirectory] stringByAppendingString:@"/Input"];
     if (![FCFileManager isDirectoryItemAtPath:dir]) {
         [FCFileManager createDirectoriesForPath:dir];
     }

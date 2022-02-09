@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *path;
 @property (nonatomic, assign) NSInteger filesize;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *createDate;
+@property (nonatomic, strong) NSDate *createDate;
+@property (nonatomic, strong) NSString *createDateString;
 
 @end
 

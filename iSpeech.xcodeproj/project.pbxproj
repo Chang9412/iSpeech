@@ -11,6 +11,9 @@
 		9C4C6D0B278425B5008AE781 /* IPTransiaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4C6D0A278425B5008AE781 /* IPTransiaction.m */; };
 		9C4C6D102786C01C008AE781 /* IPInputFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4C6D0F2786C01C008AE781 /* IPInputFileViewController.m */; };
 		9C4C6D132786C21F008AE781 /* IPInputFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4C6D122786C21F008AE781 /* IPInputFileCell.m */; };
+		9C5BBEB527B2631E00F25BDA /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5BBEB427B2631E00F25BDA /* NSString+Utils.m */; };
+		9C5BBEB927B3B27C00F25BDA /* IPVipActiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5BBEB827B3B27C00F25BDA /* IPVipActiveView.m */; };
+		9C5BBEBC27B3B42400F25BDA /* IPRecognitionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5BBEBB27B3B42400F25BDA /* IPRecognitionBar.m */; };
 		9C7F6547278BCA7000A3E8C6 /* IPBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F6546278BCA7000A3E8C6 /* IPBanner.m */; };
 		9C7F654A278BD54900A3E8C6 /* UIImageView+App.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F6549278BD54900A3E8C6 /* UIImageView+App.m */; };
 		9C7F654D278BE70F00A3E8C6 /* IPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F654C278BE70F00A3E8C6 /* IPOperation.m */; };
@@ -66,6 +69,12 @@
 		9C4C6D0F2786C01C008AE781 /* IPInputFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPInputFileViewController.m; sourceTree = "<group>"; };
 		9C4C6D112786C21F008AE781 /* IPInputFileCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPInputFileCell.h; sourceTree = "<group>"; };
 		9C4C6D122786C21F008AE781 /* IPInputFileCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPInputFileCell.m; sourceTree = "<group>"; };
+		9C5BBEB327B2631E00F25BDA /* NSString+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		9C5BBEB427B2631E00F25BDA /* NSString+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		9C5BBEB727B3B27C00F25BDA /* IPVipActiveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPVipActiveView.h; sourceTree = "<group>"; };
+		9C5BBEB827B3B27C00F25BDA /* IPVipActiveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPVipActiveView.m; sourceTree = "<group>"; };
+		9C5BBEBA27B3B42400F25BDA /* IPRecognitionBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPRecognitionBar.h; sourceTree = "<group>"; };
+		9C5BBEBB27B3B42400F25BDA /* IPRecognitionBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPRecognitionBar.m; sourceTree = "<group>"; };
 		9C7F6545278BCA7000A3E8C6 /* IPBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPBanner.h; sourceTree = "<group>"; };
 		9C7F6546278BCA7000A3E8C6 /* IPBanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPBanner.m; sourceTree = "<group>"; };
 		9C7F6548278BD54900A3E8C6 /* UIImageView+App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+App.h"; sourceTree = "<group>"; };
@@ -163,6 +172,22 @@
 				9C4C6D0D27845C87008AE781 /* RefrenceMacro.h */,
 			);
 			path = Macro;
+			sourceTree = "<group>";
+		};
+		9C5BBEB227B2630500F25BDA /* String */ = {
+			isa = PBXGroup;
+			children = (
+				9C5BBEB327B2631E00F25BDA /* NSString+Utils.h */,
+				9C5BBEB427B2631E00F25BDA /* NSString+Utils.m */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		9C5BBEB627B3B00D00F25BDA /* Vip */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vip;
 			sourceTree = "<group>";
 		};
 		9C7F654E278C277000A3E8C6 /* UINavigationBar+Awesome */ = {
@@ -265,6 +290,10 @@
 				9C7F657027915BA700A3E8C6 /* IPEditBottomView.m */,
 				9C7F657227915BC800A3E8C6 /* IPEditTableView.h */,
 				9C7F657327915BC800A3E8C6 /* IPEditTableView.m */,
+				9C5BBEB727B3B27C00F25BDA /* IPVipActiveView.h */,
+				9C5BBEB827B3B27C00F25BDA /* IPVipActiveView.m */,
+				9C5BBEBA27B3B42400F25BDA /* IPRecognitionBar.h */,
+				9C5BBEBB27B3B42400F25BDA /* IPRecognitionBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +301,7 @@
 		9CB98B7E277EDAE0007C1761 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				9C5BBEB227B2630500F25BDA /* String */,
 				9C7F655F278E834800A3E8C6 /* UIViewController */,
 				9C7F654E278C277000A3E8C6 /* UINavigationBar+Awesome */,
 				9CB98BB02783F321007C1761 /* Json */,
@@ -287,6 +317,7 @@
 		9CB98B89277EE091007C1761 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				9C5BBEB627B3B00D00F25BDA /* Vip */,
 				9CB98BA62783EE20007C1761 /* Model */,
 				9CB98B7A277ED661007C1761 /* View */,
 				9CB98B0F277D544B007C1761 /* ViewController.h */,
@@ -535,6 +566,7 @@
 				9C7F6551278C277000A3E8C6 /* UINavigationBar+Awesome.m in Sources */,
 				9CB98B97277EE487007C1761 /* UIScrollView+SafeArea.m in Sources */,
 				9CB98B7D277ED68D007C1761 /* HomeCell.m in Sources */,
+				9C5BBEB527B2631E00F25BDA /* NSString+Utils.m in Sources */,
 				9C7F657127915BA800A3E8C6 /* IPEditBottomView.m in Sources */,
 				9C7F655B278D649300A3E8C6 /* IPRecognizerHelper.m in Sources */,
 				9C4C6D132786C21F008AE781 /* IPInputFileCell.m in Sources */,
@@ -553,6 +585,7 @@
 				9CB98B0B277D544B007C1761 /* AppDelegate.m in Sources */,
 				9CB98B94277EE18E007C1761 /* IPNavigationController.m in Sources */,
 				9C4C6D082784255D008AE781 /* IPRecordViewController.m in Sources */,
+				9C5BBEB927B3B27C00F25BDA /* IPVipActiveView.m in Sources */,
 				9CB98B1C277D544D007C1761 /* main.m in Sources */,
 				9CB98B78277EB360007C1761 /* BYRecognizer.m in Sources */,
 				9C7F6568279124BF00A3E8C6 /* IPFilesViewController.m in Sources */,
@@ -566,6 +599,7 @@
 				9C7F656E2791489500A3E8C6 /* IPFilesCell.m in Sources */,
 				9CB98B84277EDB13007C1761 /* UIImage+Utils.m in Sources */,
 				9C7F656B2791255800A3E8C6 /* IPFilesHelper.m in Sources */,
+				9C5BBEBC27B3B42400F25BDA /* IPRecognitionBar.m in Sources */,
 				9CB98BAF2783EEB2007C1761 /* DBHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

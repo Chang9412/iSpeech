@@ -19,6 +19,7 @@
 @property (nonatomic, assign) IPRecordViewControllerStyle style;
 @property (nonatomic, strong) NSURL *fileUrl;
 
+@property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) UIButton *recordButton;
 @property (nonatomic, strong) BYRecorder *recorder;
 
@@ -43,8 +44,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    
     if (self.style == IPRecordViewControllerStyleRecorder) {
         self.title = @"录音";
         [self.view addSubview:self.recordButton];
@@ -80,11 +83,20 @@
             make.height.equalTo(@60);
         }];
         [self initPlayer];
-        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.player playUrl:self.fileUrl];
+        });
     }
     [self initRecognizer];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"test" style:UIBarButtonItemStylePlain target:self action:@selector(test)];
     self.navigationItem.rightBarButtonItem = item;
+    [self.view addSubview:self.textView];
+    [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@20);
+        make.left.equalTo(@10);
+        make.right.equalTo(@-10);
+        make.bottom.equalTo(self.metersView.mas_top).offset(-40);
+    }];
 }
 
 - (void)test {
@@ -123,7 +135,6 @@
     BYRecorder *recorder = [[BYRecorder alloc] init];
     recorder.delegate = self;
     self.recorder = recorder;
-    
 }
 
 - (void)initPlayer {
@@ -148,6 +159,10 @@
 
 - (void)recognizerError:(NSError *)error {
     
+}
+
+- (void)recognitionResult:(NSString *)result finished:(BOOL)finished {
+    self.textView.text = result;
 }
 
 #pragma mark - recorder
@@ -192,6 +207,18 @@
 
 #pragma mark -
 
+- (UITextView *)textView {
+    if (_textView) {
+        return _textView;
+    }
+    _textView = [[UITextView alloc] init];
+//    _textView.editable = NO;
+    _textView.font = [UIFont systemFontOfSize:15];
+    _textView.textContainerInset = UIEdgeInsetsMake(5, 5, 5, 5);
+//    _textView.typingAttributes
+    return _textView;
+}
+
 - (UIButton *)recordButton {
     if (_recordButton) {
         return _recordButton;
@@ -227,6 +254,7 @@
     
     return _metersView;
 }
+
 - (void)dealloc {
     if (self.recorder) {
         [self.recorder stop];

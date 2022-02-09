@@ -146,7 +146,7 @@
 //}
 
 + (NSString *)fileDirectory {
-    return [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/Audio"];;
+    return [NSHomeDirectory() stringByAppendingString:@"/Library/Caches/Audio"];;
 }
 
 - (NSString *)filePath {

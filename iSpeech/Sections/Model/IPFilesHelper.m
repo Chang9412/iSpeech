@@ -20,15 +20,15 @@ static NSString * const kFilesSortKey = @"kFilesSortKey";
 }
 
 + (NSArray *)allFilesSorted:(IPFilesSortType)type {
-    NSString *inboxDirectory = [self inboxDirectory];
+//    NSString *inboxDirectory = [self inboxDirectory];
     NSString *recorderDirectory = [self recorderDirectory];
     NSString *recognizerDirectory = [self recognizerDirectory];
-    NSArray *inboxFiles = [self allFilesInDirectory:inboxDirectory];
+//    NSArray *inboxFiles = [self allFilesInDirectory:inboxDirectory];
     NSArray *recorderFiles = [self allFilesInDirectory:recorderDirectory];
     NSArray *recognizerFiles = [self allFilesInDirectory:recognizerDirectory];
 
     NSMutableArray *allFiles = [NSMutableArray array];
-    [allFiles addObjectsFromArray:inboxFiles];
+//    [allFiles addObjectsFromArray:inboxFiles];
     [allFiles addObjectsFromArray:recorderFiles];
     [allFiles addObjectsFromArray:recognizerFiles];
     
@@ -55,8 +55,12 @@ static NSString * const kFilesSortKey = @"kFilesSortKey";
     
     NSMutableArray *marray = [NSMutableArray array];
     for (NSString *string in sortedArray) {
+        NSDictionary *attributes = [FCFileManager attributesOfItemAtPath:string];
         IPFile *file = [[IPFile alloc] init];
-        file.name = string;
+        file.path = string;
+        file.createDate = attributes[NSFileCreationDate];
+        file.filesize = [attributes[NSFileSize] floatValue];
+        file.name = string.lastPathComponent;
 //        file.
         [marray addObject:file];
     }
@@ -67,7 +71,7 @@ static NSString * const kFilesSortKey = @"kFilesSortKey";
     if (![FCFileManager isDirectoryItemAtPath:directory]) {
         return nil;
     }
-    NSArray *list = [FCFileManager listFilesInDirectoryAtPath:directory withSuffix:nil];
+    NSArray *list = [FCFileManager listFilesInDirectoryAtPath:directory];
     return list;
 }
 

@@ -7,6 +7,7 @@
 
 #import "IPFilesCell.h"
 #import <Masonry.h>
+#import "NSString+Utils.h"
 
 @interface IPFilesCell ()
 
@@ -32,12 +33,13 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
+        [self setup];
     }
-    return self;;
+    return self;
 }
 
 - (void)setup {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self.contentView addSubview:self.playImageView];
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.introLabel];
@@ -52,12 +54,12 @@
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.playImageView.mas_right).offset(12);
         make.right.equalTo(@-80);
-        make.top.equalTo(self.playImageView.mas_top).offset(-5);
+        make.centerY.equalTo(self.playImageView.mas_centerY).offset(-10);
         make.height.greaterThanOrEqualTo(@0);
     }];
     [self.introLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.titleLabel);
-        make.top.equalTo(self.titleLabel.mas_bottom).offset(10);
+        make.top.equalTo(self.titleLabel.mas_bottom).offset(5);
         make.height.greaterThanOrEqualTo(@0);
     }];
     [self.moreButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -67,7 +69,8 @@
 }
 
 - (void)setFile:(IPFile *)file {
-    
+    self.titleLabel.text = file.name;
+    self.introLabel.text = [NSString stringWithFormat:@"%@ %@", [NSString stringWithFilesize:file.filesize], file.createDateString];
 }
 
 - (void)moreButtonClicked {

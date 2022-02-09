@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol BYRecognizerDelegate <NSObject>
 
 - (void)recognizerError:(NSError *)error;
+- (void)recognitionResult:(NSString *)result finished:(BOOL)finished;
 
 @end
 
